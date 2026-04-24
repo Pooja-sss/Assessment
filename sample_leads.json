@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Rahul",
+    "email": "rahul@example.com",
+    "business_type": "Gym",
+    "company_size": "11-50",
+    "budget": 5000,
+    "urgency": "Immediate",
+    "goal": "Launch a landing page and booking funnel",
+    "message": "We need a landing page urgently for our gym and want to start generating trial bookings this week."
+  },
+  {
+    "name": "Anita",
+    "email": "anita@example.com",
+    "business_type": "Coaching",
+    "company_size": "1-10",
+    "budget": 1800,
+    "urgency": "This month",
+    "goal": "Collect more webinar leads",
+    "message": "I am comparing a few tools and need a simple funnel for webinar signups and follow-up emails."
+  },
+  {
+    "name": "Vikram",
+    "email": "vikram@example.com",
+    "business_type": null,
+    "company_size": null,
+    "budget": null,
+    "urgency": null,
+    "goal": "Need help",
+    "message": "Call me"
+  }
+]

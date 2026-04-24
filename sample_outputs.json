@@ -1,0 +1,100 @@
+[
+  {
+    "lead": {
+      "name": "Rahul",
+      "email": "rahul@example.com",
+      "business_type": "Gym",
+      "company_size": "11-50",
+      "budget": 5000,
+      "urgency": "Immediate",
+      "goal": "Launch a landing page and booking funnel",
+      "message": "We need a landing page urgently for our gym and want to start generating trial bookings this week."
+    },
+    "score": 95,
+    "category": "hot",
+    "missing_fields": [],
+    "unclear_signals": [],
+    "scoring_reasons": [
+      "high_urgency",
+      "strong_budget",
+      "team_with_growth_potential",
+      "intent:launch",
+      "intent:landing page",
+      "intent:funnel",
+      "intent:urgent"
+    ],
+    "classification_prompt": "You are an AI lead triage assistant for KeaBuilder, a SaaS platform for funnels, lead capture, and automation.\n\nClassify the lead into one of: hot, warm, cold, needs_review.\n\nRules:\n- Hot: urgent timeline, clear commercial intent, sufficient budget, strong purchase signal\n- Warm: real interest but moderate urgency or moderate budget\n- Cold: vague interest, weak urgency, limited budget, low buying signal\n- Needs_review: missing critical inputs or message is too unclear to classify confidently\n\nReturn JSON only with:\n{\n  \"category\": \"hot|warm|cold|needs_review\",\n  \"confidence\": 0-1,\n  \"reasoning\": [\"short reason\", \"short reason\"],\n  \"follow_up_questions\": [\"question 1\", \"question 2\"]\n}\n\nLead:\n{\"name\": \"Rahul\", \"email\": \"rahul@example.com\", \"business_type\": \"Gym\", \"company_size\": \"11-50\", \"budget\": 5000, \"urgency\": \"Immediate\", \"goal\": \"Launch a landing page and booking funnel\", \"message\": \"We need a landing page urgently for our gym and want to start generating trial bookings this week.\"}",
+    "response_prompt": "You are KeaBuilder's AI sales assistant.\n\nWrite a short, warm, human reply to this inbound lead.\n\nGuidelines:\n- Use the lead's first name if available\n- Mention their business type or goal when possible\n- Match the urgency without sounding pushy\n- Sound like a helpful human, not a template\n- Keep it between 50 and 90 words\n- If information is missing, ask one clear follow-up question\n\nLead category: hot\nLead data:\n{\"name\": \"Rahul\", \"email\": \"rahul@example.com\", \"business_type\": \"Gym\", \"company_size\": \"11-50\", \"budget\": 5000, \"urgency\": \"Immediate\", \"goal\": \"Launch a landing page and booking funnel\", \"message\": \"We need a landing page urgently for our gym and want to start generating trial bookings this week.\"}\n\nReturn JSON only:\n{\n  \"subject\": \"email subject\",\n  \"reply\": \"message body\"\n}",
+    "response": {
+      "subject": "KeaBuilder inquiry for Gym",
+      "reply": "Hi Rahul, thanks for reaching out. It sounds like you want help with Launch a landing page and booking funnel for Gym, and your timeline is active. We'd be a great fit to move quickly here. If you're available, send your target launch date and current funnel status, and we can suggest the fastest next step."
+    },
+    "follow_up_questions": []
+  },
+  {
+    "lead": {
+      "name": "Anita",
+      "email": "anita@example.com",
+      "business_type": "Coaching",
+      "company_size": "1-10",
+      "budget": 1800,
+      "urgency": "This month",
+      "goal": "Collect more webinar leads",
+      "message": "I am comparing a few tools and need a simple funnel for webinar signups and follow-up emails."
+    },
+    "score": 45,
+    "category": "warm",
+    "missing_fields": [],
+    "unclear_signals": [],
+    "scoring_reasons": [
+      "medium_urgency",
+      "low_budget",
+      "small_team",
+      "intent:funnel",
+      "intent:webinar",
+      "intent:follow-up emails"
+    ],
+    "classification_prompt": "You are an AI lead triage assistant for KeaBuilder, a SaaS platform for funnels, lead capture, and automation.\n\nClassify the lead into one of: hot, warm, cold, needs_review.\n\nRules:\n- Hot: urgent timeline, clear commercial intent, sufficient budget, strong purchase signal\n- Warm: real interest but moderate urgency or moderate budget\n- Cold: vague interest, weak urgency, limited budget, low buying signal\n- Needs_review: missing critical inputs or message is too unclear to classify confidently\n\nReturn JSON only with:\n{\n  \"category\": \"hot|warm|cold|needs_review\",\n  \"confidence\": 0-1,\n  \"reasoning\": [\"short reason\", \"short reason\"],\n  \"follow_up_questions\": [\"question 1\", \"question 2\"]\n}\n\nLead:\n{\"name\": \"Anita\", \"email\": \"anita@example.com\", \"business_type\": \"Coaching\", \"company_size\": \"1-10\", \"budget\": 1800, \"urgency\": \"This month\", \"goal\": \"Collect more webinar leads\", \"message\": \"I am comparing a few tools and need a simple funnel for webinar signups and follow-up emails.\"}",
+    "response_prompt": "You are KeaBuilder's AI sales assistant.\n\nWrite a short, warm, human reply to this inbound lead.\n\nGuidelines:\n- Use the lead's first name if available\n- Mention their business type or goal when possible\n- Match the urgency without sounding pushy\n- Sound like a helpful human, not a template\n- Keep it between 50 and 90 words\n- If information is missing, ask one clear follow-up question\n\nLead category: warm\nLead data:\n{\"name\": \"Anita\", \"email\": \"anita@example.com\", \"business_type\": \"Coaching\", \"company_size\": \"1-10\", \"budget\": 1800, \"urgency\": \"This month\", \"goal\": \"Collect more webinar leads\", \"message\": \"I am comparing a few tools and need a simple funnel for webinar signups and follow-up emails.\"}\n\nReturn JSON only:\n{\n  \"subject\": \"email subject\",\n  \"reply\": \"message body\"\n}",
+    "response": {
+      "subject": "KeaBuilder inquiry for Coaching",
+      "reply": "Hi Anita, thanks for sharing your goals for Coaching. It sounds like you're exploring the right setup for Collect more webinar leads. A good next step would be to understand your main conversion goal and traffic source so we can recommend the most useful funnel and automation flow."
+    },
+    "follow_up_questions": []
+  },
+  {
+    "lead": {
+      "name": "Vikram",
+      "email": "vikram@example.com",
+      "business_type": null,
+      "company_size": null,
+      "budget": null,
+      "urgency": null,
+      "goal": "Need help",
+      "message": "Call me"
+    },
+    "score": 0,
+    "category": "needs_review",
+    "missing_fields": [
+      "business_type",
+      "budget",
+      "urgency"
+    ],
+    "unclear_signals": [
+      "message_too_short"
+    ],
+    "scoring_reasons": [],
+    "classification_prompt": "You are an AI lead triage assistant for KeaBuilder, a SaaS platform for funnels, lead capture, and automation.\n\nClassify the lead into one of: hot, warm, cold, needs_review.\n\nRules:\n- Hot: urgent timeline, clear commercial intent, sufficient budget, strong purchase signal\n- Warm: real interest but moderate urgency or moderate budget\n- Cold: vague interest, weak urgency, limited budget, low buying signal\n- Needs_review: missing critical inputs or message is too unclear to classify confidently\n\nReturn JSON only with:\n{\n  \"category\": \"hot|warm|cold|needs_review\",\n  \"confidence\": 0-1,\n  \"reasoning\": [\"short reason\", \"short reason\"],\n  \"follow_up_questions\": [\"question 1\", \"question 2\"]\n}\n\nLead:\n{\"name\": \"Vikram\", \"email\": \"vikram@example.com\", \"business_type\": null, \"company_size\": null, \"budget\": null, \"urgency\": null, \"goal\": \"Need help\", \"message\": \"Call me\"}",
+    "response_prompt": "You are KeaBuilder's AI sales assistant.\n\nWrite a short, warm, human reply to this inbound lead.\n\nGuidelines:\n- Use the lead's first name if available\n- Mention their business type or goal when possible\n- Match the urgency without sounding pushy\n- Sound like a helpful human, not a template\n- Keep it between 50 and 90 words\n- If information is missing, ask one clear follow-up question\n\nLead category: needs_review\nLead data:\n{\"name\": \"Vikram\", \"email\": \"vikram@example.com\", \"business_type\": null, \"company_size\": null, \"budget\": null, \"urgency\": null, \"goal\": \"Need help\", \"message\": \"Call me\"}\n\nReturn JSON only:\n{\n  \"subject\": \"email subject\",\n  \"reply\": \"message body\"\n}",
+    "response": {
+      "subject": "KeaBuilder inquiry for your business",
+      "reply": "Hi Vikram, thanks for reaching out. I can help, but I need business_type, budget before I can recommend the right next step. Could you share your goal, timeline, and approximate budget so we can guide you properly?"
+    },
+    "follow_up_questions": [
+      "What budget range have you set for this project?",
+      "When are you hoping to launch?",
+      "What type of business are you running?",
+      "Can you describe the result you want in one or two sentences?"
+    ]
+  }
+]
